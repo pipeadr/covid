@@ -1,19 +1,20 @@
+import API from '../config/variables.js';
 import fetchData from './utils/fetchData.js';
-//const fetchData = require('./utils/fetchData.js');
-let API = 'https://api.quarantine.country/api/v1/summary/latest';
+import casos from './cases/cases.js';
+import country from './cases/country.js';
 
 async function covid(url_api) {
-    let id = 0;
     try {
       const data = await fetchData(url_api);
       console.log(`Total de Casos: ${data.data.regions.afghanistan.active_cases}`);
-    //   const json = await fetchData();
-    //   console.log(`Mi nombre es: ${id.name}`);
     } catch(err) {
       console.error(err);
     }
 }
+//covid(API);
+casos(API);
 
-
-
-covid(API);
+window.search.addEventListener('change', () => {
+  let h = window.search.value;
+  country(API, h);
+})
