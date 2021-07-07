@@ -6,27 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid 19</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1>coronavirus in the world</h1>
-    
-    <h2>total cases:</h2> 
-    <p id="total_cases" ></p> <br>
-    <h2>active cases:</h2> 
-    <p  id="active_cases"></p> <br>
-    <h2>total deaths:</h2> 
-    <p id="total_deaths"></p> <br>
-    <h2>recovered</h2>
-    <p id="recovered"></p><br>
-    <h3>search your country</h3>
-     <input type="text" id="search"> <br>
-     <h3 id="name_pais"></h3> <br>
-     <h3 id="total_cases_country"></h3><br>
-     <h3 id="active_cases_country"></h3><br>
-     <h3 id="deaths_country"></h3><br>
-     <h3 id="recovered_country"></h3><br>
-     <h3 id="critical_country"></h3><br>
-     <h3 id="tested_country"></h3>
+ <section class="cases_world">
+    <h1 class="title">coronavirus in the world</h1>
+     <section class="ppl">
+       <section class="cases_wold--child">
+        <h2>total cases:</h2> 
+        <p id="total_cases" ></p> 
+       </section>
+       <section class="cases_wold--child">
+        <h2>active cases:</h2> 
+        <p  id="active_cases"></p>
+       </section>
+       <section class="cases_wold--child">
+          <h2>total deaths:</h2>
+          <p id="total_deaths"></p>
+       </section>
+       <section class="cases_wold--child">
+        <h2>recovered:</h2>
+        <p id="recovered"></p>
+       </section>
+     </section>
+ </section> <!--cases_world-->
+
+    <section class="cases_world">
+       <h3 class="title">search your country</h3>
+       <section class="cases_search">
+         <div>
+            <input type="text" id="search">
+         </div>
+         <h3 id="name_pais"></h3>
+           <section class="cases_contry">
+            <section class="cases_contry--search">
+               <h3 id="total_cases_country_t"></h3>
+               <p id="total_cases_country"></p>
+            </section>
+            <section class="cases_contry--search">
+               <h3 id="active_cases_country_t"></h3>
+               <p id="active_cases_country"></p>
+            </section>
+            <section class="cases_contry--search">
+               <h3 id="deaths_country_t"></h3>
+               <p id="deaths_country"></p>
+            </section>
+            <section class="cases_contry--search">
+               <h3 id="recovered_country_t"></h3>
+               <p id="recovered_country"></p>
+            </section>
+            <section class="cases_contry--search">
+               <h3 id="critical_country_t"></h3>
+               <p id="critical_country"></p>
+            </section>
+            <section class="cases_contry--search">
+               <h3 id="tested_country_t"></h3>
+               <p id="tested_country"></p>
+            </section>
+           </section>
+       </section>
+    </section>
 </body>
 <script type="module" src="./src/index.js"></script>
 </html>

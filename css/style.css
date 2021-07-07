@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html
+{
+    font-size: 62.5%;
+}
+body {
+    background-color: #000;
+    color: rgb(255, 195, 0);
+}
+/*cases_world*/
+section.cases_world {
+    margin: 20px;
+}
+section.cases_world .title {
+  text-align: center;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+}
+section.ppl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: 40px;
+}
+section.cases_wold--child {
+    width: 20%;
+    border: 1px solid transparent;
+    padding: 20px 0;
+}
+section.cases_wold--child:hover {
+    background-color: rgb(255, 195, 0);
+    color: #000;
+    border: 1px solid #fff;
+}
+section.cases_wold--child > h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+section.cases_wold--child > p {
+    text-align: center;
+    font-size: 1.8rem;
+}
+section.cases_search {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+section.cases_search div > input {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgb(255, 195, 0);
+    background-color: transparent;
+    width: 300px;
+    outline: none;
+    color: rgb(255, 195, 0);
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+    text-align: center;
+}
+h3#name_pais {
+    margin-top: 30px;
+    font-size: 1.8em;
+
+}
+section.cases_contry {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+section.cases_contry--search {
+    width: 33%;
+    padding: 15px;
+}
+section.cases_contry--search > h3 {
+    font-size: 2.4rem;
+    text-align: center;
+}
+section.cases_contry--search > p {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
