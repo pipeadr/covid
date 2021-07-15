@@ -30,7 +30,23 @@ async function paises(url_api, country) {
             if(country === "") {
               
               window.name_pais.textContent = "Debe escribir el nombre del país";
-              console.log("a");
+              window.total_cases_country_t.textContent = ""
+              window.total_cases_country.textContent = ""
+  
+              window.active_cases_country.textContent = ""
+              window.active_cases_country_t.textContent = ""
+  
+              window.deaths_country_t.textContent = ""
+              window.deaths_country.textContent = ""
+  
+              window.recovered_country_t.textContent = ""
+              window.recovered_country.textContent = ""
+  
+              window.critical_country_t.textContent = ""
+              window.critical_country.textContent = ""
+              
+              window.tested_country_t.textContent = ""
+              window.tested_country.textContent = "" 
             } else {
             window.name_pais.textContent = "Debe terminar de digitar el nombre del país o escribirlo bien";
             window.total_cases_country_t.textContent = ""
