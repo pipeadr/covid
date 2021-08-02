@@ -5,12 +5,13 @@ module.exports = {
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "main.js"
+        filename: "main.js",
+        clean: true
     },
-    mode: 'development',
     resolve: {
         extensions: [".js"]
     },
+    mode: 'development',
     module: {
         rules: [
             {
@@ -40,10 +41,6 @@ module.exports = {
             template: './public/index.html', // LA RUTA AL TEMPLATE HTML
             filename: './index.html'// NOMBRE FINAL DEL ARCHIVO
         }),
-        new MiniCssExtractPlugin(
-            {
-                filename: 'assets/[name].[contenthash].css'
-            }
-        ),
+        new MiniCssExtractPlugin(),
     ],
 }

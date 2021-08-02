@@ -1,16 +1,19 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "main.js"
+        filename: "main.js",
+        clean: true
     },
-    mode: 'production',
     resolve: {
         extensions: [".js"]
     },
+    mode: 'production',
     module: {
         rules: [
             {
@@ -22,14 +25,20 @@ module.exports = {
                   loader: "babel-loader"
                 },
                 // Exclude permite omitir archivos o carpetas especificas
-                exclude: /node_modules/
               },
+            //   {
+            //     test: /\.html$/,
+            //     use:  [
+            //         {
+            //             loader: 'html-loader'
+            //         }
+            //     ]
+            //  },
               {
-                test: /\.css$/i,
-                use: [
-                  MiniCssExtractPlugin.loader,
-                  "css-loader",
-                ]
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader,
+                    "css-loader",
+                ],
               },
         ]
     },
@@ -41,7 +50,15 @@ module.exports = {
             filename: './index.html'// NOMBRE FINAL DEL ARCHIVO
         }),
         new MiniCssExtractPlugin({
+            // filename: './moco.css'
             filename: 'assets/[name].[contenthash].css'
         }),
     ],
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new CssMinimizerPlugin(),
+            new TerserPlugin()
+        ]
+    },
 }

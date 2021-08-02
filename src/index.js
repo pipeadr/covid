@@ -2,6 +2,7 @@ import API from '../config/variables.js';
 import fetchData from './utils/fetchData.js';
 import casos from './cases/cases.js';
 import country from './cases/country.js';
+import '../css/style.css';
 
 async function covid(url_api) {
     try {
